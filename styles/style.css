@@ -172,14 +172,6 @@ z-index: 2;
   margin: 20px 0 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
-.table__cell_theme_dark {
-  width: 200px;
-  color: white;
-  margin-right: 0;
-  margin-top: 80px;
-}
-
 .feynman {
   background-color: #f2f2f2;
   position: relative;
@@ -225,5 +217,48 @@ z-index: 2;
   position: absolute;
   right: 48px;
   top: 50%;
+  z-index: 1;
+}
+
+.kaufman {
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
+  overflow: hidden;
+  position: relative;
+  color: white;
+}
+
+.section-title_theme_dark {
+  z-index: 4;
+}
+
+.section-subtitle_theme_dark {
+  z-index: 3;
+}
+
+.table_theme_dark {}
+
+.table__cell_theme_dark {
+  width: 200px;
+  color: white;
+  margin-right: 0;
+  margin-top: 80px;
+  z-index: 2;
+}
+
+.table__heading_theme_dark {}
+
+.table__text_theme_dark {}
+
+.kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  position: absolute;
+  right: -210px;
+  top: 0;
+  width: 877px;           /* ОТКЛОНЕНИЕ РАзМЕРОВ ОТ МАКЕТА */
+  height: 877px;
   z-index: 1;
 }
