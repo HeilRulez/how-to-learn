@@ -63,6 +63,7 @@
   bottom: 0;
   width: 765px;
   height: 608px;
+  z-index: 1;
 }
 
 .header__square-pic {
@@ -72,12 +73,7 @@
   background-color: #2f80ed;
   width: 568px;
   height: 568px;
-  z-index: -1;
-}
-
-.header__square-pic {
-  height: 568px;
-  width: 568px;
+  z-index: 0;
 }
 
 .description {
