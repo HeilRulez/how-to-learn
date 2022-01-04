@@ -27,14 +27,14 @@
   z-index: 1;
 }
 
-.logo__place_header {
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
 }
 
 .header__title {
-  width: 730px;
+  max-width: 730px;
   line-height: 96px;
   font-size: 102px;
   font-weight: 600;
@@ -46,22 +46,23 @@
   position: absolute;
   left: 64px;
   bottom: 30px;
-  width: 388px;
+  max-width: 388px;
   line-height: 25px;
   font-size: 18px;
   z-index: 3;
 }
 
-.header__subtitle_link {
+.header__link {
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .header__main-illustration {
+  width: 765px;
+  height: 608px;
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 765px;
-  height: 608px;
   z-index: 1;
 }
 
@@ -85,16 +86,15 @@
   display: flex;
   width: 80%;
   justify-content: space-between;
-  min-height: 350px;                           /* КАК ПОМЕРИТЬ ОСТАТОК 30px * 2 */
 }
 
 .two-columns__bref {
-  width: 175px;
+  max-width: 175px;
   line-height: 1.2;
   font-size: 18px;
   margin: 0;
   color: #2f80ed;
-  font-weight: 500;
+  font-weight: normal;
 }
 
 .two-columns__main-text {
@@ -108,6 +108,10 @@
 .two-columns__paragraph {
   line-height: 34px;
   font-size: 24px;
+  margin: 0 0 30px;
+}
+
+.two-columns__paragraph:last-child {
   margin: 0;
 }
 
@@ -129,7 +133,7 @@
   line-height: 1.15;
   font-weight: 600;
   margin: 0;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
 }
 
@@ -137,7 +141,7 @@
   font-size: 24px;
   line-height: 34px;
   margin: 20px 0 0;
-  width: 60%;
+  max-width: 60%;
   text-align: center;
 }
 
@@ -179,6 +183,7 @@
 }
 
 .feynman__img {
+  background-image: url(../images/feynman.png);
   width: 867px;
   height: 637px;
   position: absolute;
@@ -191,7 +196,7 @@
   font-size: 120px;
   line-height: 1.15;
   font-weight: 600;
-  width: 648px;
+  max-width: 648px;
   text-align: center;
   padding-top: 100px;
   margin: 0 auto;
@@ -202,6 +207,7 @@
 .feynman__subtitle {
   font-size: 36px;
   line-height: 51px;
+  font-weight: normal;
   text-align: center;
   margin: 70px auto 0;
   z-index: 1;
@@ -230,16 +236,19 @@
 }
 
 .section-title_theme_dark {
+  color: white;
   z-index: 4;
 }
 
 .section-subtitle_theme_dark {
+  color: white;
   z-index: 3;
 }
 
 .table_theme_dark {}
 
 .table__cell_theme_dark {
+  color: white;
   width: 200px;
   margin-top: 80px;
   z-index: 2;
@@ -251,10 +260,11 @@
 
 .kaufman__triangle {
   background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
   position: absolute;
   right: -210px;
   top: 0;
-  width: 877px;                             /* ОТКЛОНЕНИЕ РАЗМЕРОВ ОТ МАКЕТА */
+  width: 877px;
   height: 877px;
   z-index: 1;
 }
@@ -267,18 +277,22 @@
   justify-content: center;
 }
 
-.footer__colums {
+.footer__columns {
   display: flex;
   width: 90%;
   margin: 60px auto 40px;
   justify-content: space-between;
 }
 
-.footer__colums_content_copyright {
+.footer__column_content_copyright {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-basis: 711px;
+}
+
+.footer__column_content_copyright a {
+  width: 0;        /* ИНАЧЕ ССЫЛКА НА ВСЮ ДЛИННУ КОНТЕЙНЕРА. ДРУГОГО НЕ ПРИДУМАЛ. */
 }
 
 .logo__place_footer {
@@ -292,16 +306,12 @@
   margin: 0;
 }
 
-.footer__colums_content_info {
+.footer__column_content_info {
   display: flex;
   flex-direction: column;
 }
 
-.footer__column_link:last-child {            /* КОСТЫЛЬ ДЛЯ СООТВЕТСТВИЯ ТРЕБОВАНИЯМ */
-  margin-bottom: 16px;
-}
-
-.footer__colums_content_social {
+.footer__column_content_social {
   display: flex;
   flex-direction: column;
 }
@@ -314,7 +324,7 @@
   margin: 0 0 20px;
 }
 
-.footer__column_link {
+.footer__column_links {
   font-size: 18px;
   line-height: 30px;
   display: flex;
@@ -322,12 +332,12 @@
   margin: 0 0 16px;
 }
 
-.footer__column_link_item {
+.footer__column_link {
   text-decoration: none;
   color: white;
 }
 
-.footer__column_link_item img {
+.footer__social-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
