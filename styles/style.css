@@ -286,9 +286,12 @@
   justify-content: space-between;
 }
 
-.footer__column_content_copyright {
+.footer__column {
   display: flex;
   flex-direction: column;
+}
+
+.footer__column_content_copyright {
   justify-content: space-between;
   flex-basis: 711px;
 }
@@ -297,7 +300,7 @@
   width: 0;        /* ИНАЧЕ ССЫЛКА НА ВСЮ ДЛИННУ КОНТЕЙНЕРА. ДРУГОГО НЕ ПРИДУМАЛ. */
 }
 
-.logo__place_footer {
+.logo_place_footer {
   height: 35px;
 }
 
@@ -308,16 +311,9 @@
   margin: 0;
 }
 
-.footer__column_content_info {
-  display: flex;
-  flex-direction: column;
-}
+.footer__column_content_info {}
 
-.footer__column_content_social {
-  display: flex;
-  flex-direction: column;
-}
-
+.footer__column_content_social {}
 
 .footer__column-heading {
   font-size: 18px;
@@ -326,7 +322,7 @@
   margin: 0 0 20px;
 }
 
-.footer__column_links {
+.footer__column-links {
   font-size: 18px;
   line-height: 30px;
   display: flex;
@@ -334,7 +330,7 @@
   margin: 0 0 16px;
 }
 
-.footer__column_link {
+.footer__column-link {
   text-decoration: none;
   color: white;
 }
